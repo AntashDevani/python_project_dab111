@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us | GROUP 2{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="mb-4">About Us</h1>
+
+    <div class="row">
+
+        <div class="col-md-8">
+            <h2 class="text-left">About Dataset</h2>
+            <p class="text-left">As the complexities in the market increase and the competition keeps getting tougher, a Superstore Giant is seeking your insights into what works well for them. In particular, they would like to focus on the products, regions, categories and customer segments that they should focus on and those they should ignore.</p>
+            <p class="text-left">You can even take this a step further and try and build a Regression model to predict Sales or Profit.</p>
+            <p class="text-left">The dataset will have more than ample opportunities for you to get creative, but make sure to also add some tangible business value too.            </p>
+            <h3 class="text-left">Key Features of Dataset</h3>
+            <ul class="text-left">
+                <li><strong>Row ID:</strong> Unique ID for each row.</li>
+                <li><strong>Order ID:</strong> Unique Order ID for each Customer.</li>
+                <li><strong>Order Date:</strong> Order Date of the product.</li>
+                <li><strong>Ship Date:</strong> Shipping Date of the Product.</li>
+                <li><strong>Ship Mode:</strong> Shipping Mode specified by the Customer.</li>
+                <li><strong>Customer ID:</strong> Unique ID to identify each Customer.</li>
+                <li><strong>Customer Name:</strong> Name of the Customer.</li>
+                <li><strong>Segment:</strong> The segment where the Customer belongs.</li>
+                <li><strong>Country:</strong> Country of residence of the Customer.</li>
+                <li><strong>City:</strong> City of residence of of the Customer.</li>
+                <li><strong>State:</strong> State of residence of the Customer.</li>
+                <li><strong>Postal Code:</strong> Postal Code of every Customer.</li>
+                <li><strong>Region:</strong> Region where the Customer belong.</li>
+                <li><strong>Product ID:</strong> Unique ID of the Product.</li>
+                <li><strong>Category:</strong> Category of the product ordered.</li>
+                <li><strong>Sub-Category:</strong> Sub-Category of the product ordered.</li>
+                <li><strong>Product Name:</strong> Name of the Product.</li>
+                <li><strong>Sales:</strong> Sales of the Product.</li>
+                <li><strong>Quantity:</strong> Quantity of the Product.</li>
+                <li><strong>Discount:</strong> Discount provided.</li>
+                <li><strong>Profit:</strong> Profit/Loss incurred.</li>
+            </ul>
+        </div>
+
+
+        <div class="col-md-4">
+            <img src="../static/images/dataset-cover.jpg" class="img-fluid rounded shadow">
+        </div>
+    </div>
+
+    <!-- Group Members Section -->
+    <h2 class="mt-4">Our Team</h2>
+    <div class="row">
+        {% for member in GROUP_MEMBER_DETAILS %}
+            <div class="col-md-3">
+                <div class="card mb-4 mt-5">
+                    <div class="card-body text-center">
+                        <h5 class="card-title"><b>{{ member.name }}</b></h5>
+                        <p class="card-text"><strong>Student ID:</strong> {{ member.student_id }}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
